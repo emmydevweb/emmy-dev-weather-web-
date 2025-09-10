@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    
+    background-image: url('weather-cloudy.jpg');
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    color: #34495e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+
+.weather-container {
+    background-color: #34495e; /* A slightly lighter shade of the background */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    color: #ffffff;
+}
+
+.search-bar {
+    width: 250px;
+    padding: 10px;
+    border: none;
+    background-color: #ecf0f1;
+    color: #34495e;
+}
+
+.search-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3498db; /* A bright, professional blue */
+    color: white;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s;
+}
+.search-button:hover {
+    background-color: #2980b9;
+}
+h1 {
+    color: #3498db; /* The same blue as your button */
+    margin-bottom: 20px;
+    font-size: 2em;
+    font-family: 'Permanent Marker', cursive; /* Add this line */
+}
+.details-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.detail-item {
+    text-align: center;
+}
+.unit-toggle-button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin-left: 10px;
+}
+
+.unit-toggle-button:hover {
+    background-color: #2980b9;
+}
+
+.forecast-container {
+    background-color: #34495e;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    margin-top: 20px;
+}
+
+.forecast-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.forecast-item {
+    background-color: #2c3e50;
+    padding: 15px;
+    border-radius: 8px;
+    flex-basis: 150px;
+    min-width: 100px;
+}
+
+.forecast-item p {
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+.forecast-item span {
+    font-size: 14px;
+}
