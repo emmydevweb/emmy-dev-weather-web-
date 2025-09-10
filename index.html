@@ -10,18 +10,17 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
     <div class="weather-container">
-        <h1>EMMY DEV'S WEATHER APP</h1>
-        <input type="text" class="search-bar" placeholder="Enter city name...">
-        <button class="search-button">Search</button>
-        <button class="unit-toggle-button">°F</button>
-
-        <div class="weather-display" style="display: none;">
+        <h1>EMMY DEV'S<br>WEATHER APP</h1>
+        <div class="search-and-buttons">
+            <input type="text" class="search-bar" placeholder="Enter city name...">
+            <button class="search-button">Search</button>
+            <button class="unit-toggle-button">°F</button>
+        </div>
+        <div class="weather-display">
             <h2 class="city-name"></h2>
             <p class="temperature"></p>
             <p class="description"></p>
-
             <div class="details-container">
                 <div class="detail-item">
                     <p class="temp-min"></p>
@@ -36,19 +35,12 @@
                     <span>Humidity</span>
                 </div>
                 <div class="detail-item">
-                    <p class="wind-speed"></p>
+                    <p class="wind"></p>
                     <span>Wind</span>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="forecast-container" style="display: none;">
-        <h2>Daily Forecast</h2>
-        <div class="forecast-list">
-            </div>
-    </div>
-
     <script src="script.js"></script>
 </body>
 </html>

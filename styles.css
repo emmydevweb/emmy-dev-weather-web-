@@ -1,115 +1,111 @@
+/* General styles */
 body {
     font-family: Arial, sans-serif;
-    
-    background-image: url('weather-cloudy.jpg');
-    
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    
-    color: #34495e;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     margin: 0;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.5s ease-in-out;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    flex-direction: column;
+    background-image: url('weather-sunny.jpg');
 }
 
+h1 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
 
+/* Container for weather info */
 .weather-container {
-    background-color: #34495e; /* A slightly lighter shade of the background */
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
     text-align: center;
-    color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 450px;
+    backdrop-filter: blur(10px);
+}
+
+/* Search bar and button styles */
+.search-and-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
 .search-bar {
-    width: 250px;
+    width: 70%;
     padding: 10px;
     border: none;
-    background-color: #ecf0f1;
-    color: #34495e;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #333;
+    font-size: 1rem;
+    outline: none;
 }
 
-.search-button {
-    padding: 10px 20px;
+.search-button, .unit-toggle-button {
+    background-color: rgba(255, 255, 255, 0.9);
     border: none;
-    border-radius: 5px;
-    background-color: #3498db; /* A bright, professional blue */
-    color: white;
+    padding: 10px 15px;
+    border-radius: 20px;
+    color: #333;
+    font-size: 1rem;
     cursor: pointer;
-    margin-left: 10px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
 }
-.search-button:hover {
-    background-color: #2980b9;
+
+.search-button:hover, .unit-toggle-button:hover {
+    background-color: rgba(255, 255, 255, 1);
 }
-h1 {
-    color: #3498db; /* The same blue as your button */
+
+/* Weather display styles */
+.weather-display {
+    margin-top: 20px;
+    display: none; /* This ensures it's hidden on initial load */
+}
+
+.city-name {
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.temperature {
+    font-size: 4rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 1.5rem;
+    text-transform: capitalize;
     margin-bottom: 20px;
-    font-size: 2em;
-    font-family: 'Permanent Marker', cursive; /* Add this line */
 }
+
 .details-container {
     display: flex;
     justify-content: space-around;
-    align-items: center;
     margin-top: 20px;
-    font-size: 14px;
 }
 
 .detail-item {
     text-align: center;
 }
-.unit-toggle-button {
-    background-color: #3498db;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s;
-    margin-left: 10px;
-}
 
-.unit-toggle-button:hover {
-    background-color: #2980b9;
-}
-
-.forecast-container {
-    background-color: #34495e;
-    color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    text-align: center;
-    margin-top: 20px;
-}
-
-.forecast-list {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.forecast-item {
-    background-color: #2c3e50;
-    padding: 15px;
-    border-radius: 8px;
-    flex-basis: 150px;
-    min-width: 100px;
-}
-
-.forecast-item p {
-    margin: 5px 0;
+.detail-item p {
+    margin: 0;
     font-weight: bold;
 }
 
-.forecast-item span {
-    font-size: 14px;
+.detail-item span {
+    font-size: 0.9rem;
 }
